@@ -1,6 +1,6 @@
 Welcome to the repository for my personal portfolio website! 🌐
 
-Live site link: darksalmon-tiger-222594.hostingersite.com ( its a temporary domain name :D)
+Live site link: [Portfolio website](https://darksalmon-tiger-222594.hostingersite.com/)
 
 Features
 The website is developed using ReactJs and highlights the use of 3d models made possible with three.Js
