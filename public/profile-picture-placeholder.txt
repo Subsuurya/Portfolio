@@ -1,0 +1,16 @@
+PROFILE PICTURE INSTRUCTIONS
+============================
+
+To add your professional picture:
+
+1. Add your professional headshot image to the public folder
+2. Name it exactly: "profile-picture.jpg"
+3. Recommended size: 400x400 pixels or larger (square aspect ratio)
+4. Supported formats: JPG, PNG, or WebP
+
+The image will automatically appear in the Hero section.
+If no image is found, it will show your initials "JD" as a fallback.
+
+Current fallback initials: "JD"
+To change the initials, edit the Hero.jsx component and replace "JD" with your initials.
+
