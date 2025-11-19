@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion'
 import { Download, Github, Linkedin, Mail } from 'lucide-react'
+import ProfilePic from '../assets/ProfilePic.png'
 
 const Hero = () => {
   const achievements = [
     { number: '1+', label: 'Years in Frontend' },
-    { number: '5+', label: 'Client Builds' },
-    { number: '3', label: 'Industries Served' },
-    { number: '2', label: 'Live SaaS Platforms' },
+    { number: '3+', label: 'Client Builds' },
   ]
 
   return (
@@ -30,7 +29,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                   <img
-                    src="/profile-picture.jpg"
+                    src={ProfilePic}
                     alt="Professional Headshot"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -120,7 +119,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                   <img
-                    src="/profile-picture.jpg"
+                    src={ProfilePic}
                     alt="Professional Headshot"
                     className="w-full h-full object-cover"
                     onError={(e) => {
