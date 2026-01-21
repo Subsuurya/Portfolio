@@ -6,58 +6,73 @@ const About = () => {
     {
       degree: 'BSc (Hons) Computer Science (Intelligent Systems)',
       school: 'Asia Pacific University, Kuala Lumpur',
-      year: '2019 – 2023 | CGPA 3.41',
+      year: '2021 – 2023 | CGPA 3.41',
       description: 'Explored AI, intelligent systems, and full-stack development through project-based modules.'
     },
     {
       degree: 'Diploma in Information Technology (Software Engineering)',
-      school: 'Asia Pacific University',
-      year: '2017 – 2021 | CGPA 3.44',
+      school: 'Asia Pacific University, Kuala Lumpur',
+      year: '2019 – 2021 | CGPA 3.44',
       description: 'Built a foundation in software engineering, user research, and SDLC best practices.'
     }
   ]
 
   const experience = [
     {
-      title: 'Frontend Developer',
-      company: 'Total Dynamics Technology SDN BHD',
-      period: 'Mar 2025 – Present',
-      description: 'Designs client-ready dashboards, authentication journeys, and UI prototypes for enterprise SaaS modules.',
-      achievements: [
-        'Built a progress management platform with React, Vite, PHP, and JWT auth to digitize task tracking for internal teams.',
-        'Produced high-fidelity wireframes and interactive prototypes in Figma to accelerate stakeholder buy-in.',
-        'Led frontend delivery for a cloud accounting suite enhanced with AI workflows, OCR extraction, and GrokAI API.'
-      ]
+       title: 'Software Developer',
+    company: 'Total Dynamics Technology Holding Sdn. Bhd.',
+    period: 'Mar 2025 – Present',
+    description:
+      'Frontend and system developer responsible for building, integrating, and maintaining business-critical web applications with accounting and billing logic.',
+    achievements: [
+      'Developed and maintained web applications including progress management, accounting, and billing systems using React.js with Vite.',
+      'Built reusable, scalable UI components ensuring responsive and cross-browser compatible interfaces.',
+      'Integrated frontend applications with PHP and Laravel-based backends via RESTful APIs.',
+      'Consumed and tested backend APIs with proper authentication, data validation, and error handling.',
+      'Collaborated closely with backend developers to align frontend workflows with server-side business logic.',
+      'Used pgAdmin for database interaction and Postman for API testing and request–response lifecycle validation.',
+      'Designed and integrated OpenAI GPT-4o into the payroll system to automatically extract and populate receipt data from uploaded expense receipts, reducing manual entry and errors.',
+      'Applied accounting and billing principles including invoicing, recurring charges, reconciliation, and billing accuracy.',
+      'Translated business requirements into functional UI flows aligned with backend rules.',
+      'Used GitHub for version control, collaboration, and change tracking while following clean code and component-based architecture best practices.'
+    ]
     },
     {
       title: 'End User Support Specialist (Baker Hughes Malaysia)',
       company: 'Tech Mahindra',
       period: 'Nov 2023 – May 2024',
-      description: 'Provided Tier-1/2 assistance for hardware, software, and network incidents across Malaysia operations.',
-      achievements: [
-        'Resolved daily support tickets spanning OS, application, and network issues with SLA-aligned communication.',
-        'Collaborated with system administrators and application developers to triage escalations efficiently.',
-        'Produced detailed case notes and follow-ups for high-priority incidents, ensuring transparent handovers.'
-      ]
+     description:
+      'Provided end-user technical support across hardware, software, network, and system-related issues to ensure smooth daily operations.',
+    achievements: [
+      'Provided technical support to end users, addressing hardware, software, network, and general IT-related issues.',
+      'Diagnosed and resolved issues involving computer systems, applications, and peripherals both on-site and remotely.',
+      'Delivered professional and timely user support through ticketing, chat, and call-based support channels.',
+      'Handled incidents and service requests using ServiceNow (SNOW), ensuring proper documentation and SLA compliance.',
+      'Assisted with installation, configuration, and maintenance of software applications on end-user devices.',
+      'Provided remote technical assistance to off-site and remote users to ensure operational continuity.',
+      'Collaborated with network administrators, system administrators, and application teams to resolve cross-functional and system-level issues.'
+    ]
     },
     {
       title: 'PMO Assistant (Intern)',
       company: 'Silver Lining Systems, Menara UOA Bangsar',
-      period: 'Jul 2022 – Oct 2022',
-      description: 'Supported migration and ERP initiatives for clients spanning Asia and Germany.',
+      period: 'Aug 2022 – Nov 2022',
+      description:
+      'Supported ERP implementation and migration projects by assisting project management, integration activities, and system validation processes.',
       achievements: [
-        'Managed artefacts for the LCIB Sarawak Cable Berhad system migration project.',
-        'Co-authored tender proposals and prepared ERP convergence decks for executive briefings.',
-        'Coordinated UAT certificates and documentation to keep go-live milestones on track.'
-      ]
+      'Supported the Project Manager in managing ERP implementation projects for LCIB Sarawak Cable Berhad, collaborating with Vienna Advantage Asia (VAA) on migration to Vienna Advantage ERP.',
+      'Contributed to the preparation and updating of tender proposals for ERP system migration projects, including Cahaya Mata Sarawak.',
+      'Participated in ERP integration activities for PERODUA’s parts manufacturing facility, supporting system alignment and data flow between modules.',
+      'Assisted in the preparation of User Acceptance Testing (UAT) documentation and Go-Live certification to support final system validation and deployment readiness.'
+    ]
     }
   ]
 
   const skills = [
-    { category: 'Programming Languages', items: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP', 'Oracle SQL'] },
-    { category: 'Libraries & Frameworks', items: ['React', 'Vite', 'Node.js', 'Express', 'Tailwind CSS', 'Bootstrap'] },
-    { category: 'Tools & Platforms', items: ['GitHub', 'VS Code', 'Figma', 'Canva', 'Hostinger', 'Postman', 'FileZilla'] },
-    { category: 'Soft Skills', items: ['Problem Solving', 'Adaptability', 'Communication', 'Time Management'] },
+    { category: 'Programming Languages', items: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP', 'SQL'] },
+    { category: 'Libraries & Frameworks', items: ['React', 'Vite', 'Node.js', 'Tailwind CSS', 'Laravel'] },
+    { category: 'Tools & Platforms', items: ['GitHub', 'VS Code', 'Figma', 'Canva', 'PGadmin', 'Postman', 'MySQL'] },
+    { category: 'AI Tools', items: ['ClaudeAI', 'CursorAI', 'Gemini', 'etc'] },
     { category: 'Learning & Growth', items: ['Self-learning', 'Tech Evangelism', 'Rapid Prototyping'] }
   ]
 

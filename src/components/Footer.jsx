@@ -21,7 +21,7 @@ const Footer = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/suurya-sivabalan',
+      url: 'https://www.linkedin.com/in/suurya-sivabalan-37b034185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
       color: 'hover:text-blue-600'
     },
     {
@@ -50,9 +50,9 @@ const Footer = () => {
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <h3 className="text-2xl font-bold gradient-text mb-4">Frontend Developer</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">Software Developer</h3>
               <p className="text-gray-300 dark:text-gray-300 mb-6 leading-relaxed">
-                Frontend-focused software developer shaping intuitive web experiences
+                Software developer crafting intuitive web experiences
                 and bridging UI ideas into production-grade products with pixel-perfect
                 detail and reliable engineering practices.
               </p>
@@ -120,7 +120,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center">
                   <span className="w-4 h-4 mr-3 text-primary-400">💼</span>
-                  <span>Open to frontend roles & freelance</span>
+                  <span>Open to developer roles & new opportunities</span>
                 </div>
               </div>
             </motion.div>

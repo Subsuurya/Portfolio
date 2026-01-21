@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { Download, Github, Linkedin, Mail } from 'lucide-react'
 import ProfilePic from '../assets/ProfilePic.png'
+import resumePDF from '../assets/Suurya_Resume_2026.pdf'
 
 const Hero = () => {
   const achievements = [
     { number: '1+', label: 'Years in Frontend' },
-    { number: '3+', label: 'Client Builds' },
+     { number: '1', label: 'Years in Backend' },
+   
   ]
 
   return (
@@ -52,7 +54,7 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
             >
               <p className="text-lg uppercase tracking-[0.35em] text-primary-600 dark:text-primary-300">
-                Frontend Developer · UI Engineer · Builder
+                Software Developer 
               </p>
               <h1 className="text-6xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mt-4">
                 Hi, I'm
@@ -75,8 +77,8 @@ const Hero = () => {
                 Let's Collaborate
               </a>
               <a 
-                href="/resume/Suurya_Sivabalan_Resume.pdf" 
-                download="Suurya_Sivabalan_Resume.pdf"
+                href={resumePDF} 
+                download="Suurya_Resume_2026.pdf"
                 className="btn-outline"
               >
                 <Download className="w-5 h-5 mr-2 inline" />

@@ -79,7 +79,7 @@ export const projects = [
     ],
     github: 'https://github.com/username/ecommerce-platform',
     demo: 'https://demo.example.com',
-    role: 'Frontend Developer',
+    role: 'Fullstack Developer',
   },
 ]
 

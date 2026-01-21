@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle } from 'lucide-react'
 import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,21 +21,28 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
+  e.preventDefault()
+  setIsSubmitting(true)
+
+  try {
+    const response = await fetch('https://formspree.io/f/xaqqljqp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+
+    if (!response.ok) throw new Error('Failed to send message')
+
     setIsSubmitted(true)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 3000)
+    setFormData({ name: '', email: '', subject: '', message: '' })
+  } catch (error) {
+    alert('Something went wrong. Please try again.')
+  } finally {
+    setIsSubmitting(false)
   }
+}
 
   const contactInfo = [
     {
@@ -52,8 +60,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Kuala Lumpur, Malaysia',
-      link: '#'
+      value: 'Negeri Sembilan, Malaysia',
     }
   ]
 
@@ -67,7 +74,7 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/suurya-sivabalan',
+      url: 'https://www.linkedin.com/in/suurya-sivabalan-37b034185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
       color: 'hover:text-blue-600'
     }
   ]
@@ -159,7 +166,7 @@ const Contact = () => {
                       placeholder="What's this about?"
                     />
                   </div>
-
+ 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Message *
@@ -172,7 +179,7 @@ const Contact = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="Tell me about your project or just say hello..."
+                      placeholder="Type your message here..."
                     />
                   </div>
 
@@ -255,24 +262,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Availability Status */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              viewport={{ once: true }}
-              className="card p-6 bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50"
-            >
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Availability</h4>
-              <div className="flex items-center mb-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                <span className="text-gray-700 dark:text-gray-300">Available for new projects</span>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                I’m currently collaborating on frontend-heavy SaaS products and open to
-                short-term engagements or full-time roles that value polished UI delivery.
-              </p>
-            </motion.div>
 
             {/* Response Time */}
             <motion.div
@@ -294,7 +283,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>LinkedIn:</span>
-                  <span className="font-medium">Within 2 days</span>
+                  <span className="font-medium">Within 24 hours</span>
                 </div>
               </div>
             </motion.div>
