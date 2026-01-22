@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Code, Database, Cloud, Server } from 'lucide-react'
+import { Github, Code, Database, Cloud, Server, ExternalLink } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { projects } from '../data/projects'
 
@@ -39,8 +39,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Work</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Product experiences, marketing sites, and internal tools that blend smooth
-            UI, reusable components, and reliable integrations.
+            Here are some of the projects I've worked on.
           </p>
         </motion.div>
 
@@ -62,6 +61,22 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
+                  {/* Demo Link Icon */}
+                  {project.demoLink && (
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                      <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <div className="bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+                          <ExternalLink className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                        </div>
+                      </a>
+                    </div>
+                  )}
                 </div>
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
